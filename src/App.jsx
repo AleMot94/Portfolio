@@ -1,34 +1,55 @@
 import '@fontsource/roboto/500.css';
 import { NavBar } from './components/NavBar';
-import { Main } from './components/Main';
+import { Presentation } from './components/Presentation';
+import { AboutMe } from './components/AboutMe';
 
 
 import { useState } from 'react';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import { ThemeProvider} from '@mui/material/styles';
+import { lightTheme, darkTheme } from './utils/theme';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
     const [ dark, setDark] = useState(true)
 
-    const theme = createTheme({
-      palette: {
-        mode: dark ? "light" : "dark"
-      }
-    })
-
-    const handleChange = (event) => {
+    const handleChangeDark = (event) => {
       setDark(event.target.checked);
     };
 
   return (
-    <ThemeProvider theme={theme}>
-    <div>
-      <NavBar/>
-      <FormControlLabel control={<Switch checked={dark} onChange={handleChange}/>} label={dark ? "light" : "dark"} />
-      <Main/>
-    </div>
+    <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+
+          <CssBaseline/>
+
+            <BrowserRouter>
+
+              <Box>
+
+                <Grid container >
+
+                  <Grid item xs={3}>
+                          <NavBar dark={dark} handleChangeDark={handleChangeDark}/>
+                    </Grid>
+
+                    <Grid item xs={9}>
+                      <Routes>
+                        <Route path='/' element={<Presentation />} />
+                        <Route path='/aboutme' element={<AboutMe />} />
+                      </Routes>
+                    </Grid>
+
+                </Grid>
+
+              </Box>
+
+            </BrowserRouter>
+
     </ThemeProvider>
   )
 }
