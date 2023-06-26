@@ -2,6 +2,7 @@ import '@fontsource/roboto/500.css';
 import { NavBar } from './components/NavBar';
 import { Presentation } from './components/Presentation';
 import { AboutMe } from './components/AboutMe';
+import { Education } from './components/Education';
 
 
 import { useState } from 'react';
@@ -31,20 +32,51 @@ function App() {
 
               <Box>
 
-                <Grid container >
+                <Box sx={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  height: '100vh', 
+                  overflow: 'auto',
+                  width: 1.20/5
+                }}>
+                  <NavBar dark={dark} handleChangeDark={handleChangeDark}/>
+                </Box>
+                
+                <Box sx={{ml: 25}}>
+                  <Routes>
+                    <Route path='/' element={<Presentation />} />
+                    <Route path='/aboutme' element={<AboutMe />} />
+                    <Route path='/education' element={<Education />} />
+                    </Routes>
+                 </Box>
+                {/* <Grid container >
 
-                  <Grid item xs={3}>
+                <Grid item xs={3}  sx={{
+                 
+                }}>
+                         
+                  </Grid>
+
+                  <Grid item xs={3}  sx={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  height: '100vh', 
+                  overflow: 'auto',
+                }}>
                           <NavBar dark={dark} handleChangeDark={handleChangeDark}/>
-                    </Grid>
+                  </Grid>
 
                     <Grid item xs={9}>
                       <Routes>
                         <Route path='/' element={<Presentation />} />
                         <Route path='/aboutme' element={<AboutMe />} />
+                        <Route path='/education' element={<Education />} />
                       </Routes>
                     </Grid>
 
-                </Grid>
+                </Grid> */}
 
               </Box>
 

@@ -17,7 +17,7 @@ export const NavBar = ({ dark, handleChangeDark }) => {
     
 
     return(
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{}}>
 
             <AppBar position="static">
 
@@ -55,7 +55,7 @@ export const NavBar = ({ dark, handleChangeDark }) => {
                   <Link to={"/aboutme"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Portfolio</Button>
                   </Link>
-                  <Link to={"/aboutme"}>
+                  <Link to={"/education"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Educacion</Button>
                   </Link>
                   <Link to={"/aboutme"}>
@@ -70,7 +70,7 @@ export const NavBar = ({ dark, handleChangeDark }) => {
               </Toolbar>
 
             </AppBar>
-
+            
         </Box>
     )
 }

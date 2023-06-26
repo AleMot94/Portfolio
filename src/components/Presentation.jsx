@@ -9,7 +9,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export const Presentation = () => {
 
     return(
-        <Box sx={{ mt: 18, ml: 10, flexGrow: 1, display: "inline-block"}} align="start">
+        <Box sx={{ mt: 20, ml: 30, flexGrow: 1, display: "inline-block"}} align="start">
             <Typography variant="h1" sx={{typography: 'h3'}} >Alejandro Motrel</Typography>
             <Typography variant="body1" sx={{ mt: 6}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. cajscnjsd@hotmail.com</Typography>
             <Button variant="contained" sx={{ mt: 6}}>Descargar CV</Button>
