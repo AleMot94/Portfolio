@@ -9,5 +9,8 @@ export const lightTheme = createTheme({
 export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary:{
+      micolor:'#30A307'
+    }
   },
 });

@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { FaReact } from 'react-icons/fa';
+
 
 export const Education = () => {
     return(
@@ -9,7 +9,7 @@ export const Education = () => {
             
             <Grid container spacing={10}>
                 <Grid item xs={6}>
-                    <Typography variant='h1' sx={{typography: 'h3'}}>Educacion <FaReact/></Typography>
+                    <Typography variant='h1' sx={{typography: 'h3'}}>Educacion</Typography>
                     <Typography variant='h4' sx={{mt: 4}}>Universidad de Buenos Aires</Typography>
                     <Typography variant='h5' sx={{mt: 1}}>Carrera - Analista de Sistemas</Typography>
                     <Typography variant='body1' sx={{mt: 2, pl: 3}}>Actualmente cursando el CBC de ingreso a la carrera</Typography>

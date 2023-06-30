@@ -17,7 +17,7 @@ export const NavBar = ({ dark, handleChangeDark }) => {
     
 
     return(
-          <Box sx={{}}>
+          <Box>
 
             <AppBar position="static">
 
@@ -47,21 +47,21 @@ export const NavBar = ({ dark, handleChangeDark }) => {
                 </Typography>
                 <Box sx={{display: "flex", flexDirection: "column", mt: 6}}>
                   <Link to={"/"}>
-                   <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Motrel</Button>
-                  </Link>
+                   <Button variant="contained" color="primary.micolor" sx={{mt:2, fontSize: 15}} >Motrel</Button>
+                  </Link> 
                   <Link to={"/aboutme"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Acerca de Mi</Button>
                   </Link>
-                  <Link to={"/aboutme"}>
+                  <Link to={"/portfolio"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Portfolio</Button>
                   </Link>
                   <Link to={"/education"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Educacion</Button>
                   </Link>
-                  <Link to={"/aboutme"}>
+                  <Link to={"/skills"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Skills</Button>
                   </Link>
-                  <Link to={"/aboutme"}>
+                  <Link to={"/contact"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Contacto</Button>
                   </Link>
               

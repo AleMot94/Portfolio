@@ -3,6 +3,9 @@ import { NavBar } from './components/NavBar';
 import { Presentation } from './components/Presentation';
 import { AboutMe } from './components/AboutMe';
 import { Education } from './components/Education';
+import { Portfolio } from './components/Portfolio';
+import { Skills } from './components/Skills';
+import { Contact } from './components/Contact';
 
 
 import { useState } from 'react';
@@ -48,7 +51,10 @@ function App() {
                     <Route path='/' element={<Presentation />} />
                     <Route path='/aboutme' element={<AboutMe />} />
                     <Route path='/education' element={<Education />} />
-                    </Routes>
+                    <Route path='/portfolio' element={<Portfolio />} />
+                    <Route path='/skills' element={<Skills />} />
+                    <Route path='/contact' element={<Contact />} />
+                  </Routes>
                  </Box>
                 {/* <Grid container >
 
