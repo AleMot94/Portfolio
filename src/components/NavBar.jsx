@@ -47,7 +47,7 @@ export const NavBar = ({ dark, handleChangeDark }) => {
                 </Typography>
                 <Box sx={{display: "flex", flexDirection: "column", mt: 6}}>
                   <Link to={"/"}>
-                   <Button variant="contained" color="primary.micolor" sx={{mt:2, fontSize: 15}} >Motrel</Button>
+                   <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Motrel</Button>
                   </Link> 
                   <Link to={"/aboutme"}>
                     <Button variant="contained" color="secondary" sx={{mt:2, fontSize: 15}} >Acerca de Mi</Button>
