@@ -14,7 +14,7 @@ import { lightTheme, darkTheme } from './utils/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ function App() {
 
             <BrowserRouter>
 
-              <Box>
+              <Box sx={{ height: '100vh' }}>
 
                 <Box sx={{
                   position: 'fixed',
@@ -45,8 +45,9 @@ function App() {
                 }}>
                   <NavBar dark={dark} handleChangeDark={handleChangeDark}/>
                 </Box>
-                
-                <Box sx={{ml: 25}}>
+
+          
+                <Box sx={{ml: "30%"}}>
                   <Routes>
                     <Route path='/' element={<Presentation />} />
                     <Route path='/aboutme' element={<AboutMe />} />
@@ -56,34 +57,7 @@ function App() {
                     <Route path='/contact' element={<Contact />} />
                   </Routes>
                  </Box>
-                {/* <Grid container >
-
-                <Grid item xs={3}  sx={{
-                 
-                }}>
-                         
-                  </Grid>
-
-                  <Grid item xs={3}  sx={{
-                  position: 'fixed',
-                  top: 0,
-                  left: 0,
-                  height: '100vh', 
-                  overflow: 'auto',
-                }}>
-                          <NavBar dark={dark} handleChangeDark={handleChangeDark}/>
-                  </Grid>
-
-                    <Grid item xs={9}>
-                      <Routes>
-                        <Route path='/' element={<Presentation />} />
-                        <Route path='/aboutme' element={<AboutMe />} />
-                        <Route path='/education' element={<Education />} />
-                      </Routes>
-                    </Grid>
-
-                </Grid> */}
-
+          
               </Box>
 
             </BrowserRouter>

@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 
 export const Education = () => {
     return(
-        <Box sx={{ mt: 5,mr: 15, ml: 30, flexGrow: 1, display: "inline-block"}} align="start">
+        <Box sx={{ mt: "5%", width: 1.6/2 }}>
             
             <Grid container spacing={10}>
                 <Grid item xs={6}>

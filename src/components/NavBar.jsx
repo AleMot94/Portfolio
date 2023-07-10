@@ -14,10 +14,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export const NavBar = ({ dark, handleChangeDark }) => {
 
-    
-
     return(
-          <Box>
+          <Box >
 
             <AppBar position="static">
 

@@ -13,8 +13,8 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { FaReact, FaCss3, FaHtml5, FaBootstrap, FaNode, FaGithub, FaLink } from 'react-icons/fa';
-import { SiMui, SiJavascript, SiMongodb } from 'react-icons/si';
+import { FaGithub, FaLink } from 'react-icons/fa';
+
 
 
 const ExpandMore = styled((props) => {
@@ -28,7 +28,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-export const CardPortfolio = ({title, subheader, paragraph, refLink} ) => {
+export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, refWeb} ) => {
    
     const [expanded, setExpanded] = useState(false);
 
@@ -68,18 +68,15 @@ export const CardPortfolio = ({title, subheader, paragraph, refLink} ) => {
                         <CardContent>
                             <Typography >Iconos con links </Typography>
                             <Box>
-                            <Link to={"https://www.youtube.com/"}><FaGithub/></Link>
-                            <Link to={"https://www.youtube.com/"}><FaLink/></Link>
+                            <Link to={refGitHub}><FaGithub/></Link>
+                            <Link to={refWeb}><FaLink/></Link>
                             </Box>
                             <Typography >Tecnologias usadas </Typography>
                             <Box>
-                            <FaGithub/>
-                            <FaLink/>
+                                {icons}
                             </Box>
                         </CardContent>
                     </Collapse>
                 </Card>
     )
-
-      
 }

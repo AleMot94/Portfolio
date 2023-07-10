@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 export const Skills = () => {
     return(
-        <Box sx={{ mt: 10,mr: 15, ml: 30, flexGrow: 1, display: "inline-block"}} align="start">
+        <Box sx={{ mt: "8%", width: 1.6/2}}>
             <Typography variant='h3'>Skills</Typography>
             <Box>
                 <Typography variant='h4'sx={{mt: 5}}>Lenguajes</Typography>
