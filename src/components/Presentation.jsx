@@ -19,6 +19,7 @@ export const Presentation = () => {
                 <Box><GitHubIcon sx={{fontSize: 45}} /></Box>
                 <Box><InstagramIcon sx={{fontSize: 45}} /></Box>
             </Box>
+            
         </Box>
     )
 }

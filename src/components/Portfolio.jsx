@@ -32,7 +32,7 @@ export const Portfolio = () => {
             <Typography variant='h3'>Portfolio</Typography>
             <Box sx={{ display: "flex", flexDirection: "row"}}>
                 {texts.map((text) => {
-                    return <CardPortfolio 
+                    return <Box> <CardPortfolio 
                         key={text.title} 
                         title={text.title} 
                         subheader={text.subheader}
@@ -41,6 +41,7 @@ export const Portfolio = () => {
                         refGitHub={text.refGitHub}
                         refWeb={text.refWeb}
                     />
+                    </Box>
                 })}  
             </Box>
               

@@ -33,7 +33,7 @@ function App() {
 
             <BrowserRouter>
 
-              <Box sx={{ height: '100vh' }}>
+              <Box>
 
                 <Box sx={{
                   position: 'fixed',
