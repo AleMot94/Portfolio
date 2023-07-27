@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -13,6 +11,7 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Stack from '@mui/material/Stack';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
 
@@ -28,7 +27,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, refWeb} ) => {
+export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, refWeb, img} ) => {
    
     const [expanded, setExpanded] = useState(false);
 
@@ -37,7 +36,7 @@ export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, re
       }
 
     return(
-        <Card variant="outlined" sx={{ maxWidth: 350, mt: 6, mx: 5, borderColor: 'primary.main', border: 2 }}>
+        <Card variant="outlined" sx={{ width: 465, borderColor: 'primary.main', border: 2 }}>
                     <CardHeader
                         title={title}
                         subheader={subheader}
@@ -45,11 +44,11 @@ export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, re
                     <CardMedia
                         component="img"
                         height="194"
-                        image="/images/WEB.jpg"
+                        image={img}
                         alt="Paella dish"
                     />
                     <CardContent>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body1" fontSize={22} color="text.secondary">
                         {paragraph}
                         </Typography>
                     </CardContent>
@@ -66,15 +65,14 @@ export const CardPortfolio = ({title, subheader, paragraph, icons, refGitHub, re
                     </CardActions>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                         <CardContent>
-                            <Typography >Iconos con links </Typography>
-                            <Box>
-                            <Link to={refGitHub}><FaGithub/></Link>
-                            <Link to={refWeb}><FaLink/></Link>
-                            </Box>
-                            <Typography >Tecnologias usadas </Typography>
-                            <Box>
+                            <Stack direction="row" spacing={3}>
+                                <Link to={refGitHub} target="_blank"><FaGithub fontSize={40}/></Link>
+                                <Link to={refWeb} target="_blank"><FaLink fontSize={40}/></Link>
+                            </Stack>
+                            <Typography variant='body1' fontSize={22}>Tecnologias usadas </Typography>
+                            <Stack direction="row" spacing={3} sx={{mt:2}}>
                                 {icons}
-                            </Box>
+                            </Stack>
                         </CardContent>
                     </Collapse>
                 </Card>
